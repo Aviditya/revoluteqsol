@@ -71,20 +71,15 @@
 <!-- nav end -->
     
 <!-- Form start -->
-
-    <form
+<form
     name="simpleContactForm"
     method="POST"
+    action="/thanks"
     data-netlify="true"
-    data-netlify-honeypot="bot-field"
+    data-netlify-recaptcha="true"
     id="simple-contact-form"
     class="contact-form"
 >
-    <p class="hidden">
-        <label id="contact-form-bot-label"
-            >Don't fill this out if you're human: <input name="bot-field" aria-labelledby="contact-form-bot-label"
-        /></label>
-    </p>
     <p class="form-row">
         <label id="contact-form-name-label" for="contact-form-name" class="form-label">Name</label>
         <input type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label" class="form-input" />
@@ -103,10 +98,12 @@
             rows="7"
         ></textarea>
     </p>
+    <div data-netlify-recaptcha="true" class="form-row"></div>
     <p class="form-row form-submit">
         <button type="submit" class="button">Send Message</button>
     </p>
 </form>
+
 
 <!-- Form End     -->
     <!-- Optional JavaScript -->
